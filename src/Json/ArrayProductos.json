@@ -1,0 +1,10 @@
+[
+    {"id":1, "nombre":"Simple cheese burguer", "descripcion":"La hamburguesa simple con 1 medallon de carne y cheddar a eleccion", "imagen":"", "precio":1100, "stock":10, "categoria":"simples"},
+    {"id":2, "nombre":"Doble cheese burguer", "descripcion":"La favorita de todos, hamburguesa con doble medallon de carne y doble cheddar", "imagen":"", "precio":1600, "stock":10, "categoria":"simples"},
+    {"id":3, "nombre":"Triple cheese burguer", "descripcion":"La favorita de todos pero recargada, hamburguesa con triple medallon de carne y triple cheddar", "imagen":"", "precio":2200, "stock":10, "categoria":"simples"},
+    {"id":4, "nombre":"Completa tradicional", "descripcion":"Lleva un medallon de carne, lechuga, tomate, jamon y queso", "imagen":"", "precio":1300, "stock":10, "categoria":"simples"},
+    {"id":5, "nombre":"La exotica", "descripcion":"Esta exquisita (pero extraña hamburguesa) lleva 1 medallon de carne con champiñiones y pollo desmenuzado", "imagen":"", "precio":2500, "stock":10, "categoria":"especiales"},
+    {"id":6, "nombre":"Blue cheese burguer", "descripcion":"Lleva 2 medallones de carne bañanos en un queso azul", "imagen":"", "precio":3100, "stock":10, "categoria":"especiales"},
+    {"id":7, "nombre":"Hamburguesa de berenjena", "descripcion":"El pan esta hecho a partir de granos germinados de trigo sarraceno, con berenjenas seleccionadas", "imagen":"", "precio":2800, "stock":10, "categoria":"veganas"},
+    {"id":8, "nombre":"Hamburguesa de lentejas y tofu", "descripcion":"Lleva 2 medallones de carne bañanos en un queso azul", "imagen":"https://delantaldealces.com/wp-content/uploads/2015/07/hamburguesa-lentejas-tofu.jpg", "precio":3100, "stock":10, "categoria":"veganas"}
+    ]
