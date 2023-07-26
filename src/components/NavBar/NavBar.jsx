@@ -9,7 +9,6 @@ function NavBar() {
   return (
     <Navbar expand="lg" className="mi-nav">
       <Container>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="me-auto nav-item__container">
             <li className='nav-tittle'><Nav.Link href="#home">Hambur10</Nav.Link></li>
             <li className='nav-item'><Nav.Link href="#ofertas">Clasicas</Nav.Link></li>

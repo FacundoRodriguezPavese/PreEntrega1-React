@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+}
+
 .mi-nav {
   background-color: #dd8160;
 }
@@ -42,6 +46,6 @@ li {
   list-style: none;
 }
 
-.bg-colo {
-   background-color: red;
+.my-container {
+  margin-top: 70px;
 }
