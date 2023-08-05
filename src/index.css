@@ -49,3 +49,8 @@ li {
 .my-container {
   margin-top: 70px;
 }
+
+a, li {
+  list-style: none;
+  text-decoration: none; 
+}
