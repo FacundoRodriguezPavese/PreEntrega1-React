@@ -3,17 +3,16 @@ import { useState } from "react";
 
 const ItemCount = ({stockItems}) => {
 
-    const [counter, setCounter] = useState(1);
-    const [stock, setStock] = useState(stockItems);
+    const [counter, setCounter] = useState(0);
 
     const sumarStock = () => {
-        if (counter < stock) {
-            setStock(counter + 1);
+        if (counter < stockItems) {
+            setCounter(counter + 1);
         } 
     }
 
     const restarStock = () => {
-        if (counter > 1) {
+        if (stockItems > 1 && counter !== 0) {
             setCounter(counter - 1)
         }
         
