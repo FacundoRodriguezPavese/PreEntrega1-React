@@ -15,7 +15,6 @@ const ItemCount = ({stockItems}) => {
         if (stockItems > 1 && counter !== 0) {
             setCounter(counter - 1)
         }
-        
     }
 
     return(
@@ -31,7 +30,7 @@ const ItemCount = ({stockItems}) => {
             </div>
          <div className="row">
          <div className="col-md-2">
-            <button type="button" className="btn btn-outline-primary" >Agregar al carrito</button>    
+            <button type="button" className="btn btn-outline-primary">Agregar al carrito</button>    
                 
                 </div>
             </div>
