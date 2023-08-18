@@ -1,19 +1,19 @@
 import React from "react";
 import { useState } from "react";
 
-const ItemCount = ({stockItems}) => {
+const ItemCount = ({stockItems, onAdd}) => {
 
-    const [counter, setCounter] = useState(0);
+    const [count, setCount] = useState(0);
 
-    const sumarStock = () => {
-        if (counter < stockItems) {
-            setCounter(counter + 1);
+    const sumar = () => {
+        if (count < stockItems) {
+            setCount(count + 1);
         } 
     }
 
-    const restarStock = () => {
-        if (stockItems > 1 && counter !== 0) {
-            setCounter(counter - 1)
+    const restar = () => {
+        if (stockItems > 1 && count !== 0) {
+            setCount(count - 1)
         }
     }
 
@@ -22,15 +22,15 @@ const ItemCount = ({stockItems}) => {
             <div className="row mb-3">
                 <div className="col-md-2">
                     <div className="btn-group" role="group" aria-label="Basic outlined example">
-                        <button type="button" className="btn btn-outline-primary" onClick={restarStock} >-</button>
-                        <button type="button" className="btn btn-outline-primary">{counter} </button>
-                        <button type="button" className="btn btn-outline-primary" onClick={sumarStock} >+</button>
+                        <button type="button" className="btn btn-outline-primary" onClick={restar} >-</button>
+                        <button type="button" className="btn btn-outline-primary">{count} </button>
+                        <button type="button" className="btn btn-outline-primary" onClick={sumar} >+</button>
                      </div>
                 </div>
             </div>
          <div className="row">
          <div className="col-md-2">
-            <button type="button" className="btn btn-outline-primary">Agregar al carrito</button>    
+            <button type="button" className="btn btn-outline-primary" onClick={()=>onAdd(count)}>Agregar al carrito</button>    
                 
                 </div>
             </div>

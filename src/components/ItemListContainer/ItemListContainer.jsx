@@ -9,39 +9,39 @@ const ItemListContainer = () => {
 
   // Revisar el useEffect con la promesa de abajo y repasar la clase de promesas
 
-  const {categoryId} = useParams();
+  const { categoryId } = useParams();
 
 
   const [item, setItem] = useState([]);
   const [load, setLoad] = useState(true);
 
-  
+
   const getData = async (categoria) => {
     const querydb = getFirestore();
-    const queryCollection = categoria ? query(collection(querydb, 'products'), where("categoryId", "==", categoria)) 
+    const queryCollection = categoria ? query(collection(querydb, 'products'), where("categoryId", "==", categoria))
                                       : collection(querydb, 'products');
     const resultado = await getDocs(queryCollection)
-    const datos = resultado.docs.map(product => ({id: product.id, ...product.data()}))
+    const datos = resultado.docs.map(product => ({ id: product.id, ...product.data() }))
     setItem(datos)
     setLoad(false)
   }
 
 
 
-useEffect(()=>{
-  getData(categoryId)
-}, [categoryId])
+  useEffect(() => {
+    getData(categoryId)
+  }, [categoryId])
 
   return (
     <>
-      {load ? <Spinner/> 
-            : <ItemList item={item}/>}
+      {load ? <Spinner />
+        : <ItemList item={item} />}
     </>
   )
 }
 
 export default ItemListContainer;
-    
+
 
 
 //    useEffect(()=>{

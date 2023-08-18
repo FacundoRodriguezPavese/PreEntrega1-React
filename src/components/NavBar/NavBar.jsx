@@ -11,14 +11,13 @@ function NavBar() {
     <Navbar expand="lg" className="mi-nav">
       <Container>
         <Navbar.Collapse id="basic-navbar-nav" className="me-auto nav-item__container">
-            <li className='nav-tittle'><NavLink to={"/"}>Hambur10</NavLink></li>
-            <li className='nav-item'><NavLink to={"/category/simples"}>Clasicas</NavLink></li>
-            <li className='nav-item'><NavLink to={"/category/especiales"}>Espaciales</NavLink></li>
-            <li className='nav-item'><NavLink to={"/category/veganas"}>Veganas</NavLink></li>
-            <li className='nav-item'><NavLink > <Faq /> </NavLink></li>
-            <li className='nav-item'><NavLink href="#carrito"> <CartWidget /> </NavLink></li>
+        <NavLink to={"/"}>Hambur10</NavLink>
+        <NavLink to={"/category/simples"}>Clasicas</NavLink>
+        <NavLink to={"/category/especiales"}>Espaciales</NavLink>
+        <NavLink to={"/category/veganas"}>Veganas</NavLink>
+        <NavLink to={"/Cart"}> <CartWidget /> </NavLink>
         </Navbar.Collapse>
-      </Container>
+      </Container>  
     </Navbar>
   );
 }
