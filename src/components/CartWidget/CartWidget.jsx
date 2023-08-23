@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { TfiShoppingCart } from 'react-icons/tfi';
+import { CartContext } from '../../context/CartContext';
 
 const CartWidget = () => {
 
+  const { getQuantity } = useContext(CartContext)
 
   return (
     <div>
       <TfiShoppingCart className='cartWidget' />
-      <span className='cartWidget'>0</span>
+      <span className='cartWidget'>{getQuantity()}</span>
     </div>
   )
 }

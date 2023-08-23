@@ -17,11 +17,16 @@ const CartProvider = ({ children }) => {
     useEffect(() => {
       console.log('El carrito contiene:', cart)
     }, [cart])
+
+    
+    const getQuantity = () => {
+        return cart.reduce((acc, item) => acc + item.cant, 0);
+    };
     
 
 
     return (
-        <CartContext.Provider value={{ cart, addItem }}>
+        <CartContext.Provider value={{ cart, addItem, getQuantity }}>
             {children}
         </CartContext.Provider>
     )

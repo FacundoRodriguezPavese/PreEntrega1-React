@@ -18,22 +18,20 @@ const ItemCount = ({stockItems, onAdd}) => {
     }
 
     return(
-        <div className="container" id="itemcount">
+        <div className="sub-container-itemCount">
             <div className="row mb-3">
-                <div className="col-md-2">
-                    <div className="btn-group" role="group" aria-label="Basic outlined example">
-                        <button type="button" className="btn btn-outline-primary" onClick={restar} >-</button>
-                        <button type="button" className="btn btn-outline-primary">{count} </button>
-                        <button type="button" className="btn btn-outline-primary" onClick={sumar} >+</button>
+                <div>
+                    <div className="btn-group">
+                        <button type="button" className="my-btn" onClick={restar} >-</button>
+                        <button type="button" className="my-btn">{count} </button>
+                        <button type="button" className="my-btn" onClick={sumar} >+</button>
                      </div>
                 </div>
             </div>
-         <div className="row">
-         <div className="col-md-2">
-            <button type="button" className="btn btn-outline-primary" onClick={()=>onAdd(count)}>Agregar al carrito</button>    
+         <div>
+            <button type="button" className="my-btn-add" onClick={()=>onAdd(count)}>Agregar al carrito</button>    
                 
                 </div>
-            </div>
         </div>  
     )
 }

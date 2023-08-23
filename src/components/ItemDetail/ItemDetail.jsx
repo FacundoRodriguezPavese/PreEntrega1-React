@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import { CartContext } from '../../context/CartContext'
+import { NavLink } from 'react-router-dom'
 
 const ItemDetail = ({item}) => {
 
@@ -15,7 +16,7 @@ const ItemDetail = ({item}) => {
   }
 
   return (
-    <div className='row'>
+    <div className='row itemDetail-container'>
      <div className='col-md-4 offset-md-4'>
         <img src={item.img} className='img-fluid'alt={item.title}/>
         <h2>{item.title}</h2>
@@ -23,8 +24,9 @@ const ItemDetail = ({item}) => {
         <h4>Precio: ${item.price}</h4>
         <p>Cantidad: {item.stock}</p>
      </div>
-     <div>
+     <div className='container-itemCount'>
       <ItemCount stockItems={10} onAdd={handleOnAdd} initial={1}/>
+      <button className='btn-finalizar'>{<NavLink className='finalizar-a text-decoration_none' to={'/Cart'}> Finalizar compra </NavLink>}</button>
      </div>
     </div>
   )
