@@ -6,8 +6,8 @@ const CartWidget = () => {
 
   return (
     <div>
-      <TfiShoppingCart />
-      <span>2</span>
+      <TfiShoppingCart className='cartWidget' />
+      <span className='cartWidget'>0</span>
     </div>
   )
 }
